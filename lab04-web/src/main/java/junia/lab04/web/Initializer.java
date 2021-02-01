@@ -2,6 +2,7 @@ package junia.lab04.web;
 
 import junia.lab04.core.config.AppConfig;
 import junia.lab04.core.config.DBConfig;
+import junia.lab04.web.config.WebConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class Initializer extends AbstractAnnotationConfigDispatcherServletInitializer {
@@ -15,7 +16,7 @@ public class Initializer extends AbstractAnnotationConfigDispatcherServletInitia
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        WebConfig webConfig = new WebConfig;
+        WebConfig webConfig = new WebConfig();
         Class[] servletConfigClasses = new Class[1];
         return servletConfigClasses;
     }
