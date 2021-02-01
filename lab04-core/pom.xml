@@ -6,6 +6,8 @@
 
     <artifactId>lab04-core</artifactId>
 
+
+
     <parent>
         <groupId>junia.2021</groupId>
         <artifactId>lab04</artifactId>
