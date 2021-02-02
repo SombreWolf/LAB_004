@@ -37,5 +37,10 @@ public class CompanyController {
         companyService.save(company);
         return "redirect:list";
     }
+    @RequestMapping("/*/delete")
+    public String deleteEntry (Company company){
+        companyService.deleteById(company.getId());
+        return"redirect:list";
+    }
 
 }
