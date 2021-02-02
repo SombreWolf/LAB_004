@@ -5,6 +5,7 @@ import junia.lab04.core.service.CompanyService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -37,10 +38,10 @@ public class CompanyController {
         companyService.save(company);
         return "redirect:list";
     }
-    @RequestMapping("/*/delete")
-    public String deleteEntry (Company company){
-        companyService.deleteById(company.getId());
-        return"redirect:list";
+    @RequestMapping("/{id}/delete")
+    public String deleteEntry (@PathVariable("id") long id){
+        companyService.deleteById(id);
+        return"redirect:/list";
     }
 
 }
